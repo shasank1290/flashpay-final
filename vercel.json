@@ -1,5 +1,15 @@
 {
   "rewrites": [
+    {
+      "source": "/payment-success",
+      "destination": "/api/payment-success",
+      "has": [{ "type": "method", "value": "POST" }]
+    },
+    {
+      "source": "/payment-failure",
+      "destination": "/api/payment-failure",
+      "has": [{ "type": "method", "value": "POST" }]
+    },
     { "source": "/(.*)", "destination": "/" }
   ],
   "functions": {
