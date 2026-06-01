@@ -2,19 +2,15 @@
   "rewrites": [
     {
       "source": "/payment-success",
-      "destination": "/api/payment-success",
-      "has": [{ "type": "method", "value": "POST" }]
+      "destination": "/api/payment-success"
     },
     {
       "source": "/payment-failure",
-      "destination": "/api/payment-failure",
-      "has": [{ "type": "method", "value": "POST" }]
+      "destination": "/api/payment-failure"
     },
-    { "source": "/(.*)", "destination": "/" }
-  ],
-  "functions": {
-    "api/**/*.{js,ts}": {
-      "runtime": "@vercel/node@4"
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  }
+  ]
 }

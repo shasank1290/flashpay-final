@@ -30,8 +30,8 @@ const App = () => (
             <Route path="/wallet" element={<ProtectedRoute><WalletPage /></ProtectedRoute>} />
             <Route path="/convert" element={<ProtectedRoute><Convert /></ProtectedRoute>} />
             <Route path="/transactions" element={<ProtectedRoute><Transactions /></ProtectedRoute>} />
-            <Route path="/payment-success" element={<PaymentSuccess />} />
-            <Route path="/payment-failure" element={<PaymentFailure />} />
+      <Route path="/payment-success-ui" element={<PaymentSuccess />} />
+<Route path="/payment-failure-ui" element={<PaymentFailure />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
