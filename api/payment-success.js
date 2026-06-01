@@ -1,8 +1,9 @@
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    // Convert POST body to query params and redirect to frontend
-    const params = new URLSearchParams(req.body).toString();
-    res.redirect(307, `/payment-success?${params}`);
+    // Read and parse form data from request body
+    const body = await req.text();
+    const params = new URLSearchParams(body).toString();
+    res.redirect(303, `/payment-success?${params}`);
   } else {
     res.status(405).json({ error: 'Method not allowed' });
   }
